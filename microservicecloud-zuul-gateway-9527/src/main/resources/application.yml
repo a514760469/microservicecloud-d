@@ -1,0 +1,21 @@
+server:
+  port: 9527
+spring:  application:    name: microservicecloud-zuul-gateway
+    
+# eureka客户端配置
+eureka: 
+  client:  
+    service-url:                               # 客户端注册进eureka服务列表内
+      defaultZone: http://eureka7003.com:7003/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/  
+  instance: 
+    instance-id: gateway-9527.com
+    prefer-ip-address: true                    # 访问路径可以显示IP地址
+
+zuul:
+  prefix: /cplh
+  ignored-services: "*"                        # 忽略原服务名 使用  /cplh/mydept/** 调用  routes:    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**                  
+                    
+info:
+  app.name: cplh-microservice
+  company.name: cplh
