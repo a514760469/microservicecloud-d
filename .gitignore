@@ -11,10 +11,14 @@
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
+.idea/
 *.iml
+*.iws
 *.ipr
+*.ids
+*.orig
+classes/
+out/
 
 ### NetBeans ###
 /nbproject/private/
@@ -23,3 +27,22 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+######################
+# Eclipse
+######################
+*.pydevproject
+.project
+.metadata
+tmp/
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.factorypath
+/src/main/resources/rebel.xml
